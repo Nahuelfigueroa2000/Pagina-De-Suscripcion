@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Style2.css">
+    <title>Suscripcion Exitosa!!!</title>
+</head>
+<body>
+    <article class="Plantilla">
+        <div>
+            <h1>Gracias Por Suscribirte!!</h1>
+            <p>Se envió un correo a <span id="user-email"></span></p>
+            <button onclick="goBack()">Volver a la página anterior</button>
+        </div>
+        <img id="imagenExito" src="aprobado.png" alt="Suscripcion Exitosa">
+    </article>
+    <script>
+        // Recuperar el correo electrónico de localStorage
+        var userEmail = localStorage.getItem('userEmail');
+        var userEmailElement = document.getElementById('user-email');
+        
+        if (userEmail) {
+          userEmailElement.textContent = userEmail;
+        }
+    
+        function goBack() {
+          window.history.back();
+        }
+      </script>
+</body>
+</html>

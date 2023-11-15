@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Style.css">
+    <title>Pagina Suscripcion</title>
+</head>
+<body>
+    <article class="Plantilla">
+        <div>
+            <h1 id="Titulo">Mantenete Actualizado!</h1>
+            <p>
+                Suscríbete a nuestra pagina y recibirás información exclusiva sobre:
+            </p>
+            <ul>
+                <li>Actualizaciones de Desarrollo Web</li>
+                <li>Nuevos Programas y Herramientas</li>
+                <li>Descuentos en Cursos</li>
+                <li>Ofertas de Trabajo</li>
+                <li>Y Mucho mas!!</li>
+            </ul>
+            <div>
+                <form id="subscription-form" onsubmit="return validateEmail()"></form>
+                <h4>Ingresar e-mail:</h4>
+                <input type="email" id="email" placeholder="usuario@example.com">
+                <button onclick="validateEmail()">Suscríbete para recibir notificaciones</button>
+                <p id="error-message" class="error-message"></p>
+            </div>
+        </div>
+        <img id="imagen"src="Tu Historia Programador Web Simple Blanco.png" alt="nahux">
+    </article>
+    <script>
+        function validateEmail() {
+          var emailInput = document.getElementById('email');
+          var errorMensaje = document.getElementById('error-message');
+          var email = emailInput.value;
+    
+          // Expresión regular para validar el formato de un correo electrónico básico
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+          if (!emailRegex.test(email)) {
+            errorMensaje.textContent = 'Email inválido';
+            errorMensaje.style.color = 'red';
+            emailInput.classList.add('error-input'); // Agregar clase para el color de fondo rojo
+            return false;
+          } else {
+            errorMensaje.textContent = ''; // Limpiar el mensaje de error si el email es válido
+            errorMensaje.style.color = ''; // Restablecer el color del mensaje
+            emailInput.classList.remove('error-input'); // Quitar la clase para el color de fondo rojo
+            window.location.href = "SuscripcionExitosa.html";
+            // Almacenar el correo electrónico en localStorage
+            localStorage.setItem('userEmail', email);
+            return true; 
+          }
+        }
+      </script>
+</body>
+</html>

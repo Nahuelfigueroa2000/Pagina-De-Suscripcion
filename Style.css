@@ -1,0 +1,131 @@
+body
+{
+    background-color:darkslategrey;
+    margin: 0;
+}
+
+.Plantilla{
+
+    background-color: white;
+    height: 350px;
+    width: 700px;
+    padding: 100px;
+    margin:  0 auto;
+    margin-top: 200px; 
+    border-radius: 30px;
+    border: 5px solid;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#Titulo{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.9em;;
+    color: rgb(6, 1, 65);
+    margin-top: -30px;
+    margin-left: -40px;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-left: -80px;
+
+}
+
+#imagen{
+    border-radius: 20px;
+    height: 500px;
+    width: 450px;
+    margin-left: 7em;
+    margin-right: -5em;
+    margin-top: 0em;
+}
+
+ul{
+    list-style-type:'✅';
+    display:contents;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+li{
+    line-height: 1.8;
+}
+
+h4{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: -80px;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+input {
+    width: 110%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    justify-content: center;
+    margin-left: -50px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: -50px;
+    width: 110%;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .error-message {
+    margin-top: 5px;
+  }
+  
+  /* Agrega este bloque de estilos para cambiar el color de fondo del campo de entrada en caso de error */
+.error-input {
+    background-color: #FFD2D2; /* Cambia este color según tus preferencias */
+  }
+
+  /* Media queries para dispositivos móviles */
+  @media (max-width: 767px) {
+    .Plantilla {
+        display: grid;
+        height: 800px;
+        width: 350px;
+        margin: auto;
+    }
+
+    #Titulo {
+        margin-left: 0;
+    }
+
+    p {
+        margin-left: 0;
+    }
+
+    #imagen {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    h4 {
+        margin-left: 0;
+    }
+
+    input,
+    button {
+        margin-left: 0;
+    }
+}
